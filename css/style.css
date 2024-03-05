@@ -1,0 +1,706 @@
+[class^="col"] {
+    max-height: 200px;
+    border: 1px solid black;
+}
+
+.img-fluid {
+    max-height: 100%;
+}
+body {
+    background-color: #808080;
+}
+ 
+/* FIRST BUTTON FOR UIVERSE */
+.btn-class-name {
+    --primary: 255, 90, 120;
+    --secondary: 150, 50, 60;
+    width: 60px;
+    height: 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    user-select: none;
+    touch-action: manipulation;
+    outline: 10px solid rgb(var(--primary), .5);
+    border-radius: 100%;
+    position: relative;
+    transition: .3s;
+  }
+  
+  .btn-class-name .back {
+    background: rgb(var(--secondary));
+    border-radius: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .btn-class-name .front {
+    background: linear-gradient(0deg, rgba(var(--primary), .6) 20%, rgba(var(--primary)) 50%);
+    box-shadow: 0 .5em 1em -0.2em rgba(var(--secondary), .5);
+    border-radius: 100%;
+    position: absolute;
+    border: 1px solid rgb(var(--secondary));
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: inherit;
+    transform: translateY(-15%);
+    transition: .15s;
+    color: rgb(var(--secondary));
+  }
+  
+  .btn-class-name:active .front {
+    transform: translateY(0%);
+    box-shadow: 0 0;
+  }
+  /* END OF FIRST button */
+
+  /* START OF 2nd button */
+  .btn2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 13rem;
+    overflow: hidden;
+    height: 3rem;
+    background-size: 300% 300%;
+    backdrop-filter: blur(1rem);
+    border-radius: 5rem;
+    transition: 0.5s;
+    animation: gradient_301 5s ease infinite;
+    border: double 4px transparent;
+    background-image: linear-gradient(#212121, #212121),  linear-gradient(137.48deg, #ffdb3b 10%,#FE53BB 45%, #8F51EA 67%, #0044ff 87%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+  }
+  
+  #container-stars {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: 0.5s;
+    backdrop-filter: blur(1rem);
+    border-radius: 5rem;
+  }
+  
+  strong {
+    z-index: 2;
+    font-family: 'Avalors Personal Use';
+    font-size: 12px;
+    letter-spacing: 5px;
+    color: #FFFFFF;
+    text-shadow: 0 0 4px white;
+  }
+  
+  #glow {
+    position: absolute;
+    display: flex;
+    width: 12rem;
+  }
+  
+  .circle {
+    width: 100%;
+    height: 30px;
+    filter: blur(2rem);
+    animation: pulse_3011 4s infinite;
+    z-index: -1;
+  }
+  
+  .circle:nth-of-type(1) {
+    background: rgba(254, 83, 186, 0.636);
+  }
+  
+  .circle:nth-of-type(2) {
+    background: rgba(142, 81, 234, 0.704);
+  }
+  
+  .btn:hover #container-stars {
+    z-index: 1;
+    background-color: #212121;
+  }
+  
+  .btn:hover {
+    transform: scale(1.1)
+  }
+  
+  .btn:active {
+    border: double 4px #FE53BB;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    animation: none;
+  }
+  
+  .btn:active .circle {
+    background: #FE53BB;
+  }
+  
+  #stars {
+    position: relative;
+    background: transparent;
+    width: 200rem;
+    height: 200rem;
+  }
+  
+  #stars::after {
+    content: "";
+    position: absolute;
+    top: -10rem;
+    left: -100rem;
+    width: 100%;
+    height: 100%;
+    animation: animStarRotate 90s linear infinite;
+  }
+  
+  #stars::after {
+    background-image: radial-gradient(#ffffff 1px, transparent 1%);
+    background-size: 50px 50px;
+  }
+  
+  #stars::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 170%;
+    height: 500%;
+    animation: animStar 60s linear infinite;
+  }
+  
+  #stars::before {
+    background-image: radial-gradient(#ffffff 1px, transparent 1%);
+    background-size: 50px 50px;
+    opacity: 0.5;
+  }
+  
+  @keyframes animStar {
+    from {
+      transform: translateY(0);
+    }
+  
+    to {
+      transform: translateY(-135rem);
+    }
+  }
+  
+  @keyframes animStarRotate {
+    from {
+      transform: rotate(360deg);
+    }
+  
+    to {
+      transform: rotate(0);
+    }
+  }
+  
+  @keyframes gradient_301 {
+    0% {
+      background-position: 0% 50%;
+    }
+  
+    50% {
+      background-position: 100% 50%;
+    }
+  
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  @keyframes pulse_3011 {
+    0% {
+      transform: scale(0.75);
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+    }
+  
+    70% {
+      transform: scale(1);
+      box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    }
+  
+    100% {
+      transform: scale(0.75);
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+  }
+  /* END OF 2nd Button */
+
+  /* START OF 3rd button */
+  .botao {
+    width: 125px;
+    height: 45px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 1px 1px rgba(107, 221, 215, 0.37);
+    padding: 5px 10px;
+    background: rgb(47,93,197);
+    background: linear-gradient(160deg, rgba(47,93,197,1) 0%, rgba(46,86,194,1) 5%, rgba(47,93,197,1) 11%, rgba(59,190,230,1) 57%, rgba(0,212,255,1) 71%);
+    color: #fff;
+    font-family: Roboto, sans-serif;
+    font-weight: 505;
+    font-size: 16px;
+    line-height: 1;
+    cursor: pointer;
+    filter: drop-shadow(0 0 10px rgba(59, 190, 230, 0.568));
+    transition: .5s linear;
+  }
+  
+  .botao .mysvg {
+    display: none;
+  }
+  
+  .botao:hover {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: .5s linear;
+  }
+  
+  .botao:hover .texto {
+    display: none;
+  }
+  
+  .botao:hover .mysvg {
+    display: inline;
+  }
+  
+  .botao:hover::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    width: 100%;
+    height: 100%;
+    border: 3.5px solid transparent;
+    border-top: 3.5px solid #fff;
+    border-right: 3.5px solid #fff;
+    border-radius: 50%;
+    animation: animateC 2s linear infinite;
+  }
+  
+  @keyframes animateC {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+/* End of 3rd button   */
+
+/* Start of 4th button */
+.button {
+    position: relative;
+    padding: 1em 7em;
+    transform: rotateX(40deg)rotateZ(40deg);
+    transform-style: preserve-3d;
+    border: .1em solid black;
+    transition: all 150ms;
+    background-color: rgb(233, 211, 184);
+    cursor: pointer;
+  }
+  
+  .button::before {
+    content: "";
+    position: absolute;
+    width: 2em;
+    height: 99%;
+    border: .1em solid black;
+    top: -.15em;
+    right: 0;
+    transform-origin: right;
+    transform: rotateY(-90deg);
+    transition: all 150ms;
+    background-color: rgb(155, 139, 120);
+  }
+  
+  .button::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2em;
+    border: .1em solid black;
+    bottom: 0;
+    left: -.15em;
+    transform-origin: bottom;
+    transform: rotateX(90deg);
+    transition: all 150ms;
+    background-color: rgb(199, 179, 155);
+  }
+  
+  .button:active {
+    transform: rotateX(40deg)rotateZ(40deg) translateZ(-1em);
+  }
+  
+  .button:active::before {
+    width: 0;
+  }
+  
+  .button:active::after {
+    height: 0;
+  }
+/* End of 4th button   */
+
+/* Start of 5th button */
+.btn5 {
+    --color1: #dc81ee;
+    --color2: #7cc2eb;
+    perspective: 1000px;
+    padding: 1em 1em;
+    background: linear-gradient(var(--color1), var(--color2));
+    border: none;
+    outline: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #fff;
+    text-shadow: 0 10px 10px #000;
+    cursor: pointer;
+    transform: rotateX(70deg) rotateZ(30deg);
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+  }
+  
+  .btn5::before {
+    content: "";
+    width: 100%;
+    height: 15px;
+    background-color: var(--color2);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: rotateX(90deg);
+    transform-origin: bottom;
+  }
+  
+  .btn5::after {
+    content: "";
+    width: 15px;
+    height: 100%;
+    background-color: var(--color1);
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: rotateY(-90deg);
+    transform-origin: right;
+  }
+  
+  .btn5:hover {
+    transform: rotateX(30deg) rotateZ(0);
+  }
+/* End of 5th button   */
+
+/* Start of 6th button */
+.button6 {
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background: red;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(255, 31, 31, 0.15);
+    background: #e62222;
+   }
+   
+   .button6, button span {
+    transition: 200ms;
+   }
+   
+   .button6 .text {
+    transform: translateX(35px);
+    color: white;
+    font-weight: bold;
+   }
+   
+   .button6 .icon {
+    position: absolute;
+    border-left: 1px solid #c41b1b;
+    transform: translateX(110px);
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+   
+   .button6 svg {
+    width: 15px;
+    fill: #eee;
+   }
+   
+   .button6:hover {
+    background: #ff3636;
+   }
+   
+   .button6:hover .text {
+    color: transparent;
+   }
+   
+   .button6:hover .icon {
+    width: 150px;
+    border-left: none;
+    transform: translateX(0);
+   }
+   
+   .button6:focus {
+    outline: none;
+   }
+   
+   .button6:active .icon svg {
+    transform: scale(0.8);
+   }
+   /* End of 6th button */
+
+   /* Start of 7th button */
+   button {
+    font-family: inherit;
+    font-size: 20px;
+    background: #212121;
+    color: white;
+    fill: rgb(155, 153, 153);
+    padding: 0.7em 1em;
+    padding-left: 0.9em;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 15px;
+    font-weight: 1000;
+  }
+  
+  button span {
+    display: block;
+    margin-left: 0.3em;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  button svg {
+    display: block;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background: #000;
+  }
+  
+  button:hover .svg-wrapper {
+    transform: scale(1.25);
+    transition: 0.5s linear;
+  }
+  
+  button:hover svg {
+    transform: translateX(1.2em) scale(1.1);
+    fill: #fff;
+  }
+  
+  button:hover span {
+    opacity: 0;
+    transition: 0.5s linear;
+  }
+  
+  button:active {
+    transform: scale(0.95);
+  }
+/* End of 7th button   */
+
+/* Start of 8th button */
+.button8 {
+    background: transparent;
+    position: relative;
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid rgb(40, 144, 241);
+    border-radius: 25px;
+    outline: none;
+    overflow: hidden;
+    color: rgb(40, 144, 241);
+    transition: color 0.3s 0.1s ease-out;
+    text-align: center;
+  }
+  
+  .button8 span {
+    margin: 10px;
+  }
+  
+  .button8::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    content: '';
+    border-radius: 50%;
+    display: block;
+    width: 20em;
+    height: 20em;
+    left: -5em;
+    text-align: center;
+    transition: box-shadow 0.5s ease-out;
+    z-index: -1;
+  }
+  
+  .button8:hover {
+    color: #fff;
+    border: 1px solid rgb(40, 144, 241);
+  }
+  
+  .button8:hover::before {
+    box-shadow: inset 0 0 0 10em rgb(40, 144, 241);
+  }
+   
+/* End of 8th button */
+
+/* Start of 9th button */
+.switch-button1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    justify-content: center;
+    margin: auto;
+    height: 55px;
+  }
+  
+  .switch-button1 .switch-outer1 {
+    height: 100%;
+    background: #252532;
+    width: 115px;
+    border-radius: 165px;
+    -webkit-box-shadow: inset 0px 5px 10px 0px #16151c, 0px 3px 6px -2px #403f4e;
+    box-shadow: inset 0px 5px 10px 0px #16151c, 0px 3px 6px -2px #403f4e;
+    border: 1px solid #32303e;
+    padding: 6px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  .switch-button1 .switch-outer1 input[type="checkbox"] {
+    opacity: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: absolute;
+  }
+  
+  .switch-button1 .switch-outer1 .button-toggle1 {
+    height: 42px;
+    width: 42px;
+    background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(#3b3a4e),
+      to(#272733)
+    );
+    background: -o-linear-gradient(#3b3a4e, #272733);
+    background: linear-gradient(#3b3a4e, #272733);
+    border-radius: 100%;
+    -webkit-box-shadow: inset 0px 5px 4px 0px #424151, 0px 4px 15px 0px #0f0e17;
+    box-shadow: inset 0px 5px 4px 0px #424151, 0px 4px 15px 0px #0f0e17;
+    position: relative;
+    z-index: 2;
+    -webkit-transition: left 0.3s ease-in;
+    -o-transition: left 0.3s ease-in;
+    transition: left 0.3s ease-in;
+    left: 0;
+  }
+  
+  .switch-button1
+    .switch-outer1
+    input[type="checkbox"]:checked
+    + .button1
+    .button-toggle1 {
+    left: 58%;
+  }
+  
+  .switch-button1
+    .switch-outer1
+    input[type="checkbox"]:checked
+    + .button1
+    .button-indicator1 {
+    -webkit-animation: indicator 1s forwards;
+    animation: indicator 1s forwards;
+  }
+  
+  .switch-button1 .switch-outer1 .button1 {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+  }
+  
+  .switch-button1 .switch-outer1 .button-indicator1 {
+    height: 25px;
+    width: 25px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    border-radius: 50%;
+    border: 3px solid #ef565f;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    right: 10px;
+    position: relative;
+  }
+  
+  @-webkit-keyframes indicator {
+    30% {
+      opacity: 0;
+    }
+  
+    0% {
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 1;
+      border: 3px solid #60d480;
+      left: -68%;
+    }
+  }
+  
+  @keyframes indicator {
+    30% {
+      opacity: 0;
+    }
+  
+    0% {
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 1;
+      border: 3px solid #60d480;
+      left: -68%;
+    }
+  }
+  /* End of 9th button */
